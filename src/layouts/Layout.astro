@@ -1,3 +1,8 @@
+---
+const title = 'Astro Course Basics';
+---
+
+
 <!doctype html>
 <html lang="en">
 	<head>
@@ -5,10 +10,23 @@
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
+		<title>{title}</title>
 	</head>
 	<body>
+		<h1>Diego Alarcon</h1>
+		<p id="current-time">Momento Actual real: </p>
 		<slot />
+		<footer>
+			2023
+		</footer>
+		<script>
+			// const currentYear:number = new Date().getFullYear();
+			// const footer = document.querySelector('footer') as HTMLElement;
+			// footer.innerText = `current year: ${currentYear}`;
+			//Client only
+			const currentTimeParagraph = document.querySelector("#current-time") as HTMLParagraphElement;
+			currentTimeParagraph.innerText = `Momento Actual real: ${new Date().toLocaleTimeString()}`;
+		</script>
 	</body>
 </html>
 
