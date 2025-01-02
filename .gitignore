@@ -5,7 +5,7 @@ dist/
 .astro/
 
 # editors
-.vscode/
+.vscode
 .idea/
 .fleet/
 
